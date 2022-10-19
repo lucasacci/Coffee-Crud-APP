@@ -1,0 +1,25 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "Cafe",
+      "precio": "50",
+      "imagen": "https://www.macstation.com.ar/img/productos/small/1407-apple-airpods-2.jpg",
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "Te de frutilla",
+      "precio": "60",
+      "imagen": "https://www.macstation.com.ar/img/productos/small/1407-apple-airpods-2.jpg",
+      "categoria": "bebida-caliente",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Te de manzanilla ",
+      "precio": "100",
+      "imagen": "https://www.macstation.com.ar/img/productos/small/1407-apple-airpods-2.jpg",
+      "categoria": "bebida-caliente",
+      "id": 3
+    }
+  ]
+}
