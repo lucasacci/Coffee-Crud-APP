@@ -1,22 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { consultarAPI } from "../../helpers/queries";
 
 const CardProducto = () => {
+
+  const [productos, setProductos] = useState([]);
+
+
+  useEffect(() => {
+    consultarAPI().then(
+      (respuesta) => {
+        //la respuesta es exitosa
+        setProductos(respuesta);
+      },
+      (reason) => {
+        console.log(reason);
+        //mostrar un mensaje al usuario
+        Swal.fire(
+          'Ocurrio un error',
+          'Intentelo nuevamente en unos minutos',
+          'error'
+        )
+      }
+    );
+  }, []);
+
   return (
-    <Card className="my-4">
+
+   <>
+   {
+     productos.map((el,i)=>{
+       return(
+
+   
+      <Card className="my-4 mx-4" key={i}>
       <Card.Img
         variant="top"
-        src="https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        src={el.imagen}
         className="img-fluid"
       />
       <Card.Body>
-        <Card.Title>Brownie</Card.Title>
-        <Card.Text>Precio: $400</Card.Text>
+        <Card.Title>{el.nombreProducto}</Card.Title>
+        <Card.Text>Categoria: ${el.categoria}</Card.Text>
+        <Card.Text>Precio: ${el.precio}</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Button className="btn btn-danger me-2">Ver más</Button>
+        <Link to={`/detalle-producto/${el.id}`} className="btn btn-danger me-2">Ver más</Link>
       </Card.Footer>
     </Card>
+       )
+  })
+   }
+   </>
+    
   );
 };
 

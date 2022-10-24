@@ -40,7 +40,7 @@ const {id, nombreProducto, categoria, imagen, precio} = {...producto}
       <td>{imagen}</td>
       <td>{categoria}</td>
       <td>
-        <Link className="btn-warning btn" to={`/administrar/editar/${id}`}>
+        <Link className="btn-warning btn mx-2" to={`/administrar/editar/${id}`}>
           Editar
         </Link>
         <Button variant="danger" onClick={borrarProducto}>

@@ -6,7 +6,7 @@ const Inicio = () => {
     <Container className="my-5 mainSection">
       <h1 className="display-3 text-center">Bienvenidos</h1>
       <hr />
-      <Row xs={1} md={4} className="g-4">
+      <Row xs={1} md={4} className="g-4 d-flex justify-content-center">
         {/* aqui van las columnas */}
         <CardProducto></CardProducto>
       </Row>

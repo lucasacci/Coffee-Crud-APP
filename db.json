@@ -20,6 +20,19 @@
       "imagen": "https://www.macstation.com.ar/img/productos/small/1407-apple-airpods-2.jpg",
       "categoria": "bebida-caliente",
       "id": 3
+    },
+    {
+      "nombreProducto": "David de mierda",
+      "precio": "500",
+      "imagen": "https://ichef.bbci.co.uk/news/640/cpsprodpb/126F3/production/_95870557_gettyimages-521230034.jpg",
+      "categoria": "bebida-fria",
+      "id": 4
+    }
+  ],
+  "usuarios": [
+    {
+      "nombreUsuario": "luciano",
+      "clave": "luciano1234"
     }
   ]
 }

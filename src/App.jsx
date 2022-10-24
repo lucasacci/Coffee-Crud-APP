@@ -9,6 +9,7 @@ import EditarProducto from "./components/views/admiProductos/EditarProducto";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import './app.css'
+import { Registrar } from "./components/common/Registrar";
 
 
 function App() {
@@ -37,8 +38,13 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/detalle-producto"
+          path="/detalle-producto/:id"
           element={<DetalleProducto></DetalleProducto>}
+        ></Route>
+        <Route
+          exact
+          path="/registrar"
+          element={<Registrar/>}
         ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>

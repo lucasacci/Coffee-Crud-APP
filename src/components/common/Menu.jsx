@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { Navbar, Nav, Container} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 const Menu = () => {
+
+  useEffect(() => {
+   
+  }, [])
+  
+
+
+ 
   return (
     <Navbar bg="danger" variant="dark" expand="lg">
       <Container>
@@ -18,6 +27,9 @@ const Menu = () => {
             Administrar
           </NavLink>
           </Nav>
+          <NavLink end to="/registrar" className="btn btn-primary">
+            Registrarme
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
