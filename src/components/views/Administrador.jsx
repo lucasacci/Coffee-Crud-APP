@@ -3,7 +3,7 @@ import { Button, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { consultarAPI } from "../helpers/queries";
 import ItemProducto from "./admiProductos/ItemProducto";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
   const [productos, setProductos] = useState([]);
@@ -18,10 +18,10 @@ const Administrador = () => {
         console.log(reason);
         //mostrar un mensaje al usuario
         Swal.fire(
-          'Ocurrio un error',
-          'Intentelo nuevamente en unos minutos',
-          'error'
-        )
+          "Ocurrio un error",
+          "Intentelo nuevamente en unos minutos",
+          "error"
+        );
       }
     );
   }, []);
@@ -30,7 +30,7 @@ const Administrador = () => {
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Productos disponibles</h1>
-        <Link className="btn btn-primary" to='/administrar/crear'>
+        <Link className="btn btn-primary" to="/administrar/crear">
           Agregar
         </Link>
       </div>
@@ -54,7 +54,13 @@ const Administrador = () => {
             // opcion 2
             // productos.map((producto)=> <ItemProducto key={producto.id} {...producto}></ItemProducto> )
             // opcion 3
-            productos.map((producto)=> <ItemProducto key={producto.id} producto={producto} setProductos={setProductos}></ItemProducto> )
+            productos.map((producto) => (
+              <ItemProducto
+                key={producto.id}
+                producto={producto}
+                setProductos={setProductos}
+              ></ItemProducto>
+            ))
           }
         </tbody>
       </Table>

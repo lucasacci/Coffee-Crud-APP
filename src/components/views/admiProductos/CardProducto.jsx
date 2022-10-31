@@ -30,29 +30,29 @@ const CardProducto = () => {
   return (
 
    <>
-   {
-     productos.map((el,i)=>{
-       return(
+      {
+        productos.map((el,i)=>{
+          return(
 
-   
-      <Card className="my-4 mx-4" key={i}>
-      <Card.Img
-        variant="top"
-        src={el.imagen}
-        className="img-fluid"
-      />
-      <Card.Body>
-        <Card.Title>{el.nombreProducto}</Card.Title>
-        <Card.Text>Categoria: ${el.categoria}</Card.Text>
-        <Card.Text>Precio: ${el.precio}</Card.Text>
-      </Card.Body>
-      <Card.Footer>
-        <Link to={`/detalle-producto/${el.id}`} className="btn btn-danger me-2">Ver más</Link>
-      </Card.Footer>
-    </Card>
-       )
-  })
-   }
+      
+            <Card className="my-4 mx-4" key={i}>
+              <Card.Img
+                variant="top"
+                src={el.imagen}
+                className="img-fluid"
+              />
+              <Card.Body>
+                <Card.Title>{el.nombreProducto}</Card.Title>
+                <Card.Text>Categoria: ${el.categoria}</Card.Text>
+                <Card.Text>Precio: ${el.precio}</Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <Link to={`/detalle-producto/${el.id}`} className="btn btn-danger me-2">Ver más</Link>
+              </Card.Footer>
+            </Card>
+          )
+      })
+      }
    </>
     
   );
